@@ -1,0 +1,10 @@
+@use "../abstracts/colors" as c;
+
+input,
+textarea {
+	background-color: lighten(c.$secondary, 5%);
+	border: 0.1rem solid c.$primary;
+	padding: 0.2rem 0.5rem;
+	width: 25rem;
+	max-width: 80%;
+}

@@ -1,0 +1,27 @@
+@use "../abstracts/colors" as c;
+
+nav {
+	position: fixed;
+	left: 0;
+	right: 0;
+	background-color: rgba(c.$bg-color, 0.7);
+	z-index: 2;
+
+	& ul.desktop-menu {
+		display: flex;
+		justify-content: flex-end;
+		align-items: flex-end;
+		list-style: none;
+		padding: 0 1rem;
+
+		li {
+			margin: 0 0.5em;
+		}
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	nav ul.desktop-menu {
+		display: none;
+	}
+}

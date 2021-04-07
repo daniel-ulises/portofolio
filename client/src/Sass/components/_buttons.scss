@@ -1,0 +1,57 @@
+@use "../abstracts/colors" as c;
+
+button {
+	text-transform: uppercase;
+	padding: 0.3rem 1rem;
+	border: 0.1rem solid c.$primary;
+	cursor: pointer;
+	transition: all 0.2s;
+
+	&:hover {
+		background-color: c.$primary;
+		color: c.$secondary;
+	}
+}
+
+// <a> tag buttons
+a.btn {
+	text-transform: uppercase;
+	background-color: c.$secondary;
+	margin: 1rem auto;
+	padding: 0.5rem 1rem;
+	border: 1px solid c.$text-color;
+	border-radius: 10px;
+	position: relative;
+
+	&:hover {
+		color: c.$secondary;
+		background-color: c.$text-color;
+		border: 1px solid c.$secondary;
+		font-weight: bold;
+
+		.fa-arrow-down {
+			opacity: 0;
+		}
+	}
+
+	& .fa-arrow-down {
+		content: "<i class=" fas fa-arrow-down "></i>";
+		height: 1rem;
+		position: absolute;
+		bottom: -1.6rem;
+		left: 50%;
+		opacity: 1;
+		transition: opacity 0.5s;
+		animation: move 0.5s linear infinite alternate;
+	}
+}
+
+@keyframes move {
+	from {
+		bottom: -1.6rem;
+	}
+
+	to {
+		bottom: -2rem;
+	}
+}

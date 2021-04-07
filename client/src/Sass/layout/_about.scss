@@ -1,0 +1,24 @@
+@use "../abstracts/colors" as c;
+
+.about {
+	margin: 5rem 0;
+	padding: 2rem;
+	text-align: center;
+	background-color: c.$secondary;
+
+	.about-stacks {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		i {
+			font-size: 2rem;
+			margin: 0.5rem;
+			transition: color 0.5s;
+
+			&:hover {
+				color: c.$accent;
+			}
+		}
+	}
+}

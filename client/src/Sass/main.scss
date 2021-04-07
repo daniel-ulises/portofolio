@@ -1,0 +1,16 @@
+@use "./abstracts/colors" as c;
+@use "./base/index" as *;
+@use "./layout/index" as *;
+@use "./components/index" as *;
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: c.$primary;
+	color: c.$text-color;
+	font-family: Poppins, Helvetica;
+	line-height: 1.5;
+	margin: 0;
+}

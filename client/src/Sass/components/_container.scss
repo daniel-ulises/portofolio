@@ -1,0 +1,19 @@
+.container {
+	&.bg-2 {
+		margin-top: -0.1rem;
+	}
+
+	& .container-projects {
+		margin: auto;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 2rem;
+		place-items: center;
+	}
+}
+
+@media only screen and (max-width: 780px) {
+	.container .container-projects {
+		grid-template-columns: 1fr;
+	}
+}
